@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projects_Manager"
         mc:Ignorable="d"
-        Title="Projects Manager" Height="176" Width="375.997">
+        Title="Projects Manager" Height="196" Width="519.331">
     <Window.Resources>
         <ControlTemplate x:Key="ButtonTemplate" TargetType="Button">
             <Border CornerRadius="4" 
@@ -27,8 +27,8 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="145*"/>
-            <ColumnDefinition Width="220"/>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="267"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="25"/>
@@ -57,27 +57,29 @@
         </ListView>
         <StackPanel Grid.Column="1" Grid.Row="1" Orientation="Horizontal" >
 
-            <Button Name="StartProjectBtn" Width="100" Margin="5" >
-                Запустить
-            </Button>
-
+            <Button Name="StartProjectBtn" Width="150" Margin="5" >Запустить</Button>
             <Button Name="DeleteProjectBtn" Margin="0,5,5,5" Width="105">Удалить проект</Button>
         </StackPanel>
-        <TextBlock Grid.Column="1" Grid.Row="2">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
-                </Grid.ColumnDefinitions>
-                <StackPanel>                    
-                    <TextBlock Height="25">Название проекта</TextBlock>
-                    <TextBlock Text="Дата создания" Height="25"/>
-                    <TextBlock Text="Примечание" Height="25"/>
-                </StackPanel>
-                
-            </Grid>
-        </TextBlock>
 
+        <Grid Grid.Column="1" Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <TextBlock Height="25">Название проекта</TextBlock>
+                <TextBlock Text="Дата создания" Height="25"/>
+                <TextBlock Text="Примечание" Height="25"/>
+                <TextBlock Text="TODO List" Height="25"/>
+            </StackPanel>
+            <StackPanel Grid.Column="1" Margin="25,0,0,0" >
+                <TextBlock Text="ИмяПроекта" Height="25"/>
+                <TextBlock Text="Date" Height="25"></TextBlock>
+                <TextBlock Text="aaa" Height="25"/>
+                <ComboBox Height="25"/>
+
+            </StackPanel>
+        </Grid>
 
     </Grid>
 </Window>
